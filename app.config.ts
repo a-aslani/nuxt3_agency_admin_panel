@@ -1,7 +1,7 @@
 export default defineAppConfig({
     ui: {
-        primary: "gblue",
-        gblue: {
+        primary: "g-blue",
+        "g-blue": {
             '50': '#eff6ff',
             '100': '#dbeafe',
             '200': '#c0dbfd',

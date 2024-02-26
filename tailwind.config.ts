@@ -20,6 +20,12 @@ export default <Partial<Config>>{
   ],
   theme: {
     extend: {
+      colors: {
+        // 't-primary': '#333333',
+        // 'd-t-primary': '#ffffff',
+        // 't-secondary': '#4b5563',
+        // 'd-t-secondary': '#e5e7eb',
+      },
       aspectRatio: {
         auto: 'auto',
         square: '1 / 1',
