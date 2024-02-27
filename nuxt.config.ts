@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+
 export default defineNuxtConfig({
     devtools: {enabled: true},
     app: {
@@ -7,29 +8,32 @@ export default defineNuxtConfig({
 
             ],
             htmlAttrs: {
-                class: 'nuxt-ui-scrollbars',
-                lang: 'en',
+
             },
         },
     },
     css: [
         '~/assets/css/main.css',
     ],
-    tailwindcss: {
-        cssPath: '~/assets/css/tailwind.css',
-        configPath: 'tailwind.config',
-        exposeConfig: false,
-        viewer: true,
+    build: {
+        transpile: ['vuetify'],
     },
     modules: [
+        (_options, nuxt) => {
+            nuxt.hooks.hook('vite:extendConfig', (config) => {
+                config.plugins.push(vuetify({ autoImport: true }))
+            })
+        },
         '@pinia/nuxt',
         '@vueuse/nuxt',
-        '@nuxt/ui',
         '@vueuse/nuxt',
     ],
-    ui: {
-        global: true,
-        icons: ['mdi', 'heroicons']
+    vite: {
+        vue: {
+            template: {
+                transformAssetUrls,
+            },
+        },
     },
     typescript: {
         strict: false

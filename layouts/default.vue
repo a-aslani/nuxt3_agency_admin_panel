@@ -4,22 +4,17 @@
 
 <template>
 
-  <div class="flex flex-col">
+  <v-layout>
+
     <AppHeader/>
+    
+    <AppNavigationDrawer/>
 
+    <v-main>
+      <slot/>
+    </v-main>
 
-    <div class="w-full flex">
-      <div class="w-2/12">
-        <AppMenuNavbar/>
-      </div>
+  </v-layout>
 
-      <div class="w-10/12">
-        <slot/>
-      </div>
-    </div>
-
-    <AppFooter/>
-    <UNotifications/>
-  </div>
 
 </template>

@@ -1,61 +1,25 @@
 <script setup lang="ts">
-const colorMode = useColorMode()
+import {useTheme} from "vuetify";
 
-const isDark = computed({
-  get () {
-    return colorMode.value === 'dark'
-  },
-  set () {
-    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-  }
-})
+const theme = useTheme();
+
+function toggleTheme() {
+  theme.global.name.value = theme.global.current.value.dark ? "light" : "dark"
+}
 
 </script>
 
 <template>
-  <header class="w-full py-4 shadow flex items-center justify-between px-12">
-    <div class="flex flex-col justify-center">
-      <h2 class="uppercase font-bold text-2xl">Agency name</h2>
-      <p class="text-sm">Description about my agency</p>
-    </div>
-    <div class="flex items-center space-x-2">
+  <header>
 
-      <div class="flex items-center">
-        <UButton icon="i-mdi-notifications-none" variant="ghost" color="gray" size="sm"/>
-      </div>
+    <v-app-bar elevation="1">
+      <template v-slot:prepend>
+        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      </template>
+      <v-app-bar-title>AGENCY NAME</v-app-bar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon="mdi-theme-light-dark" @click="toggleTheme"></v-btn>
+    </v-app-bar>
 
-      <div>
-        <ClientOnly>
-          <UButton
-              :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
-              color="gray"
-              variant="ghost"
-              aria-label="Theme"
-              @click="isDark = !isDark"
-              size="sm"
-          />
-          <template #fallback>
-            <div class="w-8 h-8" />
-          </template>
-        </ClientOnly>
-      </div>
-
-      <div class="flex items-center">
-
-        <div class="flex items-center mx-2">
-          <UAvatar
-              alt="Alireza Aslani"
-              src="https://avatars.githubusercontent.com/u/28021705?v=4"
-              chip-color="green"
-              chip-position="top-right"
-          />
-        </div>
-
-        <UButton variant="ghost" color="gray">Alireza Aslani</UButton>
-        <UButton icon="i-mdi-dots-vertical" variant="ghost" color="gray" size="sm"/>
-
-      </div>
-
-    </div>
   </header>
 </template>
