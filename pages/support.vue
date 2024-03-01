@@ -5,7 +5,7 @@
 <template>
   <v-container>
 
-    <h4 class="text-h4 font-weight-bold text-uppercase">Projects</h4>
+    <h4 class="text-h4 font-weight-bold text-uppercase">Support</h4>
 
   </v-container>
 </template>

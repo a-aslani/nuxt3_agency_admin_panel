@@ -3,6 +3,7 @@
 </script>
 
 <template>
-  <footer class="py-12 px-8">Footer</footer>
-
+  <v-footer>
+    Footer
+  </v-footer>
 </template>
