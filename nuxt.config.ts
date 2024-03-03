@@ -1,15 +1,12 @@
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import vuetify, {transformAssetUrls} from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
     devtools: {enabled: true},
     app: {
+        pageTransition: {name: 'page', mode: 'out-in'},
         head: {
-            meta: [
-
-            ],
-            htmlAttrs: {
-
-            },
+            meta: [],
+            htmlAttrs: {},
         },
     },
     css: [
@@ -21,7 +18,7 @@ export default defineNuxtConfig({
     modules: [
         (_options, nuxt) => {
             nuxt.hooks.hook('vite:extendConfig', (config) => {
-                config.plugins.push(vuetify({ autoImport: true }))
+                config.plugins.push(vuetify({autoImport: true}))
             })
         },
         '@pinia/nuxt',
