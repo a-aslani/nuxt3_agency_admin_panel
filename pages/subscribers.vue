@@ -5,7 +5,7 @@
 <template>
   <v-container>
 
-    <h4 class="text-h4 font-weight-bold text-uppercase">Subscribers</h4>
+    <AppPageTitle>Subscribers</AppPageTitle>
 
   </v-container>
 </template>

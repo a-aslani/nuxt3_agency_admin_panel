@@ -5,7 +5,7 @@
 <template>
   <v-container>
 
-    <h4 class="text-h4 font-weight-bold text-uppercase">Discovery sessions</h4>
+    <AppPageTitle>Discovery sessions</AppPageTitle>
 
   </v-container>
 </template>

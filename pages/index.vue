@@ -6,7 +6,7 @@
 <template>
   <v-container>
 
-    <h4 class="text-h4 font-weight-bold text-uppercase">Dashboard</h4>
-
+    <AppPageTitle>Dashboard</AppPageTitle>
+    
   </v-container>
 </template>
