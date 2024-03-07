@@ -14,7 +14,7 @@
       <slot/>
       <AppFooter/>
     </v-main>
-
+    
   </v-layout>
 
 </template>

@@ -12,7 +12,7 @@ function toggleTheme() {
 <template>
   <header>
 
-    <v-app-bar elevation="0">
+    <v-app-bar flat scroll-behavior="hide">
       <template v-slot:prepend>
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
       </template>

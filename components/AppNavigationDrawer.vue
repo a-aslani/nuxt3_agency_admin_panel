@@ -18,13 +18,16 @@
       <v-list-group prepend-icon="mdi-account-multiple">
         <template v-slot:activator="{props}">
           <v-list-item v-bind="props"
-                       title="Project">
+                       title="Sales">
           </v-list-item>
         </template>
 
+        <v-list-item to="/discovery-session" title="Discovery Sessions"></v-list-item>
+        
         <v-list-item to="/clients" title="Clients"></v-list-item>
 
-        <v-list-item to="/discovery-session" title="Discovery Sessions"></v-list-item>
+        <v-list-item to="/projects" title="Projects"></v-list-item>
+
 
       </v-list-group>
 
