@@ -9,7 +9,7 @@ import colors from 'vuetify/util/colors'
 export default defineNuxtPlugin((app) => {
     const vuetify = createVuetify({
         // blueprint: md3,
-        ssr: true,
+        ssr: false,
         theme: {
             themes: {
                 light: {
@@ -19,6 +19,15 @@ export default defineNuxtPlugin((app) => {
                         background: colors.grey.lighten4,
                         // surface: string;
                         // secondary: string;
+                        success: '#3cd1c2',
+                        info: '#ffaa2c',
+                        error: '#f83e70'
+                    }
+                },
+                dark: {
+                    dark: true,
+                    colors: {
+                        primary: "#4285F4",
                         success: '#3cd1c2',
                         info: '#ffaa2c',
                         error: '#f83e70'

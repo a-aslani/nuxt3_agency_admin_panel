@@ -1,6 +1,7 @@
 import vuetify, {transformAssetUrls} from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
+    ssr: false,
     devtools: {enabled: true},
     app: {
         pageTransition: {name: 'page', mode: 'out-in'},
@@ -22,7 +23,6 @@ export default defineNuxtConfig({
             })
         },
         '@pinia/nuxt',
-        '@vueuse/nuxt',
         '@vueuse/nuxt',
     ],
     vite: {

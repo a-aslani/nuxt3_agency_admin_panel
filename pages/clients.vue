@@ -5,7 +5,11 @@ const clients = [
   {name: "Alireza Aslani", position: "CEO of crmtois.com", startedAt: "06-02-2024"},
   {name: "Alireza Aslani", position: "CEO of crmtois.com", startedAt: "06-02-2024"},
   {name: "Alireza Aslani", position: "CEO of crmtois.com", startedAt: "06-02-2024"},
-  {name: "Alireza Aslani", position: "CEO of crmtois.com", startedAt: "06-02-2024"},
+  {
+    name: "Alireza Aslani ewf",
+    position: "CEO of crmtois.com wefwef wef wefwe wef34f43g34  43g43 34g 43",
+    startedAt: "06-02-2024"
+  },
   {name: "Alireza Aslani", position: "CEO of crmtois.com", startedAt: "06-02-2024"},
 ];
 
@@ -16,12 +20,19 @@ const clients = [
 
     <AppPageTitle>Clients</AppPageTitle>
 
+    <div class="mb-4">
+      <v-btn color="primary">Click me</v-btn>
+      <v-btn color="success" class="mx-4">Click me</v-btn>
+      <v-btn color="info">Click me</v-btn>
+      <v-btn color="error" class="ms-4">Click me</v-btn>
+    </div>
+
     <div class="mt-2">
 
       <v-expansion-panels>
 
         <v-expansion-panel v-for="(client, k) in clients" :key="k">
-          <v-expansion-panel-title>
+          <v-expansion-panel-title hide-actions focusable>
             <v-row>
               <v-col cols="12" sm="4" md="2">
                 <div class="text-uppercase mb-1 text-caption text-grey">Name</div>
