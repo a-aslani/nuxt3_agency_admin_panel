@@ -273,7 +273,7 @@ function highlightClickedRow(value: any) {
                   <template v-slot:value>-</template>
                 </SalesDetailsItem>
                 <SalesDetailsItem field-name="Lead Source">
-                  <template v-slot:value>Trade Show</template>
+                  <template v-slot:value>-</template>
                 </SalesDetailsItem>
                 <v-row class="mt-4" justify="space-between" align="center">
                   <v-btn size="small" color="primary">

@@ -6,8 +6,8 @@ const clients = [
   {name: "Alireza Aslani", position: "CEO of crmtois.com", startedAt: "06-02-2024"},
   {name: "Alireza Aslani", position: "CEO of crmtois.com", startedAt: "06-02-2024"},
   {
-    name: "Alireza Aslani ewf",
-    position: "CEO of crmtois.com wefwef wef wefwe wef34f43g34  43g43 34g 43",
+    name: "Alireza Aslani",
+    position: "CEO of crmtois.com wef wefwe wef34f43g34  43g43 34g 43",
     startedAt: "06-02-2024"
   },
   {name: "Alireza Aslani", position: "CEO of crmtois.com", startedAt: "06-02-2024"},
